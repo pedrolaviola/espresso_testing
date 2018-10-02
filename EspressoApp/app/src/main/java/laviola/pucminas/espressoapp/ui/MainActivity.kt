@@ -14,6 +14,11 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
+import com.microsoft.appcenter.crashes.Crashes
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.AppCenter
+
+
 
 
 class MainActivity : BaseActivity() {
@@ -27,6 +32,8 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        AppCenter.start(application, "ba48b1cf-66c2-4e0d-acc8-6e41b56181c3",
+                Analytics::class.java, Crashes::class.java)
         userRecycleView.layoutManager = LinearLayoutManager(this)
         userRecycleView.adapter = adapter
         addBtn.setOnClickListener {
