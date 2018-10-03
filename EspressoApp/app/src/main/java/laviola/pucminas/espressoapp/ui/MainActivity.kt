@@ -4,21 +4,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
-import laviola.pucminas.espressoapp.R
-import laviola.pucminas.espressoapp.base.BaseActivity
-import laviola.pucminas.espressoapp.model.User
-import laviola.pucminas.espressoapp.service.RetrofitInterface
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
-import com.microsoft.appcenter.crashes.Crashes
-import com.microsoft.appcenter.analytics.Analytics
-import com.microsoft.appcenter.AppCenter
-
-
+import laviola.pucminas.espressoapp.R
+import laviola.pucminas.espressoapp.base.BaseActivity
+import laviola.pucminas.espressoapp.model.User
+import laviola.pucminas.espressoapp.service.RetrofitInterface
 
 
 class MainActivity : BaseActivity() {
@@ -32,8 +27,6 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        AppCenter.start(application, "ba48b1cf-66c2-4e0d-acc8-6e41b56181c3",
-                Analytics::class.java, Crashes::class.java)
         userRecycleView.layoutManager = LinearLayoutManager(this)
         userRecycleView.adapter = adapter
         addBtn.setOnClickListener {

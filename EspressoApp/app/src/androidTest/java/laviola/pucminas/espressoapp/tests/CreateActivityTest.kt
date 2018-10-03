@@ -10,6 +10,7 @@ import android.support.test.rule.ActivityTestRule
 import laviola.pucminas.espressoapp.R
 import laviola.pucminas.espressoapp.ui.CreateUserActivity
 import io.appflate.restmock.RESTMockServer
+import io.appflate.restmock.utils.RequestMatchers.pathContains
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -62,5 +63,11 @@ class CreateActivityTest {
                 .check(matches(isDisplayed()))
                 .perform(pressBack())
 
+    }
+
+    @Test
+    fun testCreationSuccess() {
+        RESTMockServer.whenPOST(pathContains("user")).thenReturnEmpty(200)
+        mTestRule.launchActivity(null)
     }
 }
