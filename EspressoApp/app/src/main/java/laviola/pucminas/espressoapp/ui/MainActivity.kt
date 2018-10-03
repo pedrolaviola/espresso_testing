@@ -12,6 +12,7 @@ import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
 import laviola.pucminas.espressoapp.R
 import laviola.pucminas.espressoapp.base.BaseActivity
+import laviola.pucminas.espressoapp.listener.UserListener
 import laviola.pucminas.espressoapp.model.User
 import laviola.pucminas.espressoapp.service.RetrofitInterface
 
@@ -21,8 +22,8 @@ class MainActivity : BaseActivity() {
         RetrofitInterface.create()
     }
     private var disposable: Disposable? = null
-
     private val adapter = GroupAdapter<ViewHolder>()
+    private lateinit var userList : Array<User>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +42,10 @@ class MainActivity : BaseActivity() {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
-                        { result -> showUsers(result) },
+                        { result ->
+                            userList = result
+                            showUsers(result)
+                        },
                         { error ->
                             showError(error)
                             showPlaceHolder()
@@ -50,14 +54,26 @@ class MainActivity : BaseActivity() {
     }
 
     private fun showUsers(result: Array<User>) {
+
         if (result.isEmpty())
             showPlaceHolder()
         else {
+            val listener = object : UserListener{
+                override fun onUserClick(user: User) {
+                    startUserDetail(user)
+                }
+            }
             hidePlaceholder()
             for (user in result) {
-                adapter.add(UserItem(user))
+                adapter.add(UserItem(user,listener))
             }
         }
+    }
+
+    private fun startUserDetail(user: User) {
+        val intent = Intent(this, DetailActivity:: class.java)
+        intent.putExtra(DetailActivity.parcelableKey, user)
+        startActivity(intent)
     }
 
     private fun showPlaceHolder() {

@@ -7,4 +7,7 @@
     <dimen name="user_job_margin_top">3dp</dimen>
     <dimen name="ic_user_size">50dp</dimen>
     <dimen name="edt_margin">20dp</dimen>
+    <dimen name="detail_user_ic_size">150dp</dimen>
+    <dimen name="detail_user_ic_margin_top">20dp</dimen>
+    <dimen name="detail_user_name_margin_top">30dp</dimen>
 </resources>

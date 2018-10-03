@@ -21,7 +21,6 @@ class CreateUserActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_user)
-
         addBtn.setOnClickListener {
             if (isFieldsChecked())
                 createUser(edtUserName.text.toString(), edtUserJob.text.toString())

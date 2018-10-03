@@ -57,4 +57,17 @@ class MainActivityTest {
         onView(withId(R.id.addBtn)).perform(click())
         intended(hasComponent(CreateUserActivity::class.java.canonicalName))
     }
+
+    @Test
+    fun testLoadUsersEmpty() {
+        RESTMockServer.whenGET(pathContains("user"))
+                .thenReturnFile(200, "users/empty_list.json")
+        mTestRule.launchActivity(null)
+        RequestsVerifier.verifyGET(pathContains("user")).invoked()
+        val list: RecyclerView = mTestRule.activity.findViewById(R.id.userRecycleView)
+        assertEquals(View.GONE, list.visibility)
+        val placeholder: View = mTestRule.activity.findViewById(R.id.placeHolder)
+        assertEquals(View.VISIBLE, placeholder.visibility)
+        assertEquals(0, list.adapter?.itemCount)
+    }
 }
