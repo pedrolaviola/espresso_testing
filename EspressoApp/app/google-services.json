@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1008243213551",
+    "firebase_url": "https://espressoapp-4c4cd.firebaseio.com",
+    "project_id": "espressoapp-4c4cd",
+    "storage_bucket": "espressoapp-4c4cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008243213551:android:305d2b5598369885",
+        "android_client_info": {
+          "package_name": "laviola.pucminas.espressoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008243213551-g0v0btnsgb0vbek4lujqj1r8cak1tft0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "laviola.pucminas.espressoapp",
+            "certificate_hash": "dfbb9e30db2ebc9020ee05b20576b6db171abe39"
+          }
+        },
+        {
+          "client_id": "1008243213551-8thnhtgdbr5ckjeekg154gtl0gb5rvnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAASYCzqV1EVD832lTF-roqwD4LcbcgHqk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008243213551-8thnhtgdbr5ckjeekg154gtl0gb5rvnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

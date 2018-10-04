@@ -48,11 +48,16 @@ class MainActivity : BaseActivity() {
                             showUsers(result)
                         },
                         { error ->
-                            val httpException = error as HttpException
-                            if (httpException.code() == 401)
+                            var httpException : HttpException? = null
+                            try {
+                                httpException = error as HttpException
+                            } catch (ignored : Exception){
+
+                            }
+                            if (httpException?.code() == 401)
                                 showAlert(R.string.not_auth)
                             else
-                                showError(error)
+                                showError()
                             showPlaceHolder()
                         }
                 )
