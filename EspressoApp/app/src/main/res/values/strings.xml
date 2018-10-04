@@ -4,4 +4,6 @@
     <string name="edt_job_hint">Cargo</string>
     <string name="alert_title">Alerta</string>
     <string name="empty_fields">Preencha todos os campos</string>
+    <string name="not_auth">Não autorizado</string>
+    <string name="error">error</string>
 </resources>

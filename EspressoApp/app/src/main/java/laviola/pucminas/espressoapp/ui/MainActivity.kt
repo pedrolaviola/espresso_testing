@@ -15,6 +15,7 @@ import laviola.pucminas.espressoapp.base.BaseActivity
 import laviola.pucminas.espressoapp.listener.UserListener
 import laviola.pucminas.espressoapp.model.User
 import laviola.pucminas.espressoapp.service.RetrofitInterface
+import retrofit2.HttpException
 
 
 class MainActivity : BaseActivity() {
@@ -23,7 +24,7 @@ class MainActivity : BaseActivity() {
     }
     private var disposable: Disposable? = null
     private val adapter = GroupAdapter<ViewHolder>()
-    private lateinit var userList : Array<User>
+    private lateinit var userList: Array<User>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,7 +48,11 @@ class MainActivity : BaseActivity() {
                             showUsers(result)
                         },
                         { error ->
-                            showError(error)
+                            val httpException = error as HttpException
+                            if (httpException.code() == 401)
+                                showAlert(R.string.not_auth)
+                            else
+                                showError(error)
                             showPlaceHolder()
                         }
                 )
@@ -58,20 +63,20 @@ class MainActivity : BaseActivity() {
         if (result.isEmpty())
             showPlaceHolder()
         else {
-            val listener = object : UserListener{
+            val listener = object : UserListener {
                 override fun onUserClick(user: User) {
                     startUserDetail(user)
                 }
             }
             hidePlaceholder()
             for (user in result) {
-                adapter.add(UserItem(user,listener))
+                adapter.add(UserItem(user, listener))
             }
         }
     }
 
     private fun startUserDetail(user: User) {
-        val intent = Intent(this, DetailActivity:: class.java)
+        val intent = Intent(this, DetailActivity::class.java)
         intent.putExtra(DetailActivity.parcelableKey, user)
         startActivity(intent)
     }
