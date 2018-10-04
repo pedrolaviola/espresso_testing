@@ -35,7 +35,7 @@ class CreateUserActivity : BaseActivity() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         { onBackPressed() },
-                        { error -> showError(error) }
+                        { showError() }
                 )
     }
 

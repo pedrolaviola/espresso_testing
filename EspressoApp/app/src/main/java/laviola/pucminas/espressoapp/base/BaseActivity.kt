@@ -8,7 +8,7 @@ import org.jetbrains.anko.toast
 
 @SuppressLint("Registered")
 open class BaseActivity : AppCompatActivity() {
-    protected fun showError(message: Throwable) {
+    protected fun showError() {
         toast(getString(R.string.error))
     }
 
