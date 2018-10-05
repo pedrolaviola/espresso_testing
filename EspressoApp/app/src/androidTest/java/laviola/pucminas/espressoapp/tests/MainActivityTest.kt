@@ -3,6 +3,7 @@ package laviola.pucminas.espressoapp.tests
 import android.support.test.espresso.Espresso.onView
 import android.support.test.espresso.action.ViewActions.click
 import android.support.test.espresso.assertion.ViewAssertions.matches
+import android.support.test.espresso.contrib.RecyclerViewActions
 import android.support.test.espresso.intent.Intents
 import android.support.test.espresso.intent.Intents.intended
 import android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent
@@ -11,6 +12,7 @@ import android.support.test.espresso.matcher.ViewMatchers.*
 import android.support.test.rule.ActivityTestRule
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import com.xwray.groupie.ViewHolder
 import laviola.pucminas.espressoapp.R
 import laviola.pucminas.espressoapp.ui.CreateUserActivity
 import laviola.pucminas.espressoapp.ui.MainActivity
@@ -18,6 +20,7 @@ import io.appflate.restmock.RESTMockServer
 import io.appflate.restmock.RequestsVerifier
 import io.appflate.restmock.utils.RequestMatchers.pathContains
 import junit.framework.Assert.assertEquals
+import laviola.pucminas.espressoapp.ui.DetailActivity
 import org.hamcrest.Matchers.not
 import org.junit.After
 import org.junit.Before
@@ -102,5 +105,17 @@ class MainActivityTest {
         val placeholder: View = mTestRule.activity.findViewById(R.id.placeHolder)
         assertEquals(View.VISIBLE, placeholder.visibility)
         assertEquals(0, list.adapter?.itemCount)
+    }
+
+    @Test
+    fun testUserItemClick() {
+        RESTMockServer.whenGET(pathContains("user"))
+                .thenReturnFile(200, "users/user_list.json")
+        mTestRule.launchActivity(null)
+        RequestsVerifier.verifyGET(pathContains("user")).invoked()
+        onView(withId(R.id.userRecycleView))
+                .perform(RecyclerViewActions
+                        .actionOnItemAtPosition<ViewHolder>(0, click()))
+        intended(hasComponent(DetailActivity::class.java.canonicalName))
     }
 }
