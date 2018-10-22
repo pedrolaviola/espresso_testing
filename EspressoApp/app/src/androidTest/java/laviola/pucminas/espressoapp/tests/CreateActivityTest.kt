@@ -21,10 +21,11 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
-class CreateActivityTest {
+class CreateActivityTest : BaseTest<CreateUserActivity>() {
 
     @Before
     fun setUp() {
+        unlockScreen(mTestRule)
         RESTMockServer.reset()
         Intents.init()
     }
