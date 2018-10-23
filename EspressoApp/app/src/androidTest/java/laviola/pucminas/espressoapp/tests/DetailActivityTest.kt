@@ -16,7 +16,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
-class DetailActivityTest : BaseTest<DetailActivity>() {
+class DetailActivityTest {
 
     @get:Rule
     val mTestRule = ActivityTestRule<DetailActivity>(
@@ -24,7 +24,6 @@ class DetailActivityTest : BaseTest<DetailActivity>() {
 
     @Before
     fun setUp() {
-        unlockScreen(mTestRule)
         Intents.init()
     }
 
