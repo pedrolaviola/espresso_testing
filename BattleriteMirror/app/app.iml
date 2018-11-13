@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":app" />
+      </configuration>
+    </facet>
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="debug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />
+        <afterSyncTasks>
+          <task>generateDebugSources</task>
+        </afterSyncTasks>
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+      </configuration>
+    </facet>
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="JVM 1.8" useProjectSettings="false">
+        <compilerSettings />
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/build/tmp/kotlin-classes/debug" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.2.71/4ce93f539e2133f172f1167291a911f83400a5d0/kotlin-stdlib-jdk7-1.2.71.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/jetified-navigation-ui-ktx-1.0.0-alpha06.aar/2eb0eecf3c9eef6233904cfd3f1cdafd/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/jetified-navigation-ui-1.0.0-alpha06.aar/835101806a26939bbdf6c481d921d747/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/material-1.0.0-rc01.aar/c42f0e49238ef280f126427d8cdfd3bf/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0-rc01.aar/aa273dcca3b1904c7ed48d86254bf939/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/jetified-navigation-fragment-ktx-1.0.0-alpha06.aar/b36c945441cfda4d0cedce3fae3cb6cb/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/jetified-navigation-fragment-1.0.0-alpha06.aar/e75ae31c259d1d6ac49e5f6a2dacf53c/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/core-ktx-1.0.0.aar/6f19cd78e5dee005f68fbb8ccc6a3ee0/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/constraintlayout-1.1.2.aar/d0f77e1a02237021faabc3fe7ead0b0a/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/jetified-navigation-runtime-ktx-1.0.0-alpha06.aar/48c18b7716a6a48da42d261d1d0daac5/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/jetified-navigation-common-ktx-1.0.0-alpha06.aar/f392841c3f44107e10d9be9e3eb7a8a7/jars/classes.jar:/home/pedro/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.71/d9717625bb3c731561251f8dd2c67a1011d6764c/kotlin-stdlib-1.2.71.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/jetified-navigation-runtime-1.0.0-alpha06.aar/596153621bda79a17c500befa53e2ee2/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/fragment-1.0.0-rc01.aar/a8506492bd9b3cb3e76c96171463f366/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.0.0-rc01.aar/c4f039dde08cdebefc57ce5f32af7ea7/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/recyclerview-1.0.0-rc01.aar/7485ccabd1fd01854cc990b152411844/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0-rc01.aar/55c5d668d48075f7dd9a0f84f4231dc5/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0-rc01.aar/edd2baf0cab494e3a3b0ef94e02db3cd/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.0.0-rc01.aar/d87702d4fb264e10517898cb88468707/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/loader-1.0.0-rc01.aar/6691a13eceacfce1bd31d1f61249fffc/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/transition-1.0.0-rc01.aar/cb9f8695e76899670c705240d2e55e14/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0-rc01.aar/f1c67aa8cd9828a002a26ba35bcaccfb/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0-rc01.aar/8eb29be277f04d9b685af1fa49087277/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0-rc01.aar/253a7308f8b3e9e00acb00eb2e3e2170/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0-rc01.aar/6a13a5968d5bd20fa3aa56bf4b94f2d8/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/customview-1.0.0-rc01.aar/2322b4f7fce388b3e96169308e79afa7/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0-rc01.aar/c7b77ee8b12dacb62c3daa9bad072015/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0-rc01.aar/5bd52204ca22748cc19bc763e3a3f748/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/jetified-navigation-common-1.0.0-alpha06.aar/d333c299b39a70172d9b133eff8b4199/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/a3392ad5aa8258f5e5bd088630b32a61/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0-rc01.aar/99f5ded3141ea39460c7d255ced1a199/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/74384632bfbddde58e6b3761dd7f52ab/jars/classes.jar:/home/pedro/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.0.0/42858b26cafdaa69b6149f45dfc2894007bc2c7a/collection-1.0.0.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/cardview-1.0.0-rc01.aar/925c825537434a5e481470e55baf71b6/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.0.0.aar/abab068c55e0b99cfc3573cdbd70f11c/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0-rc01.aar/ddf5c04e7712949e18f51a91756bac73/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0-rc01.aar/31a998b5e1850864cbbcbc4b34f7efda/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/print-1.0.0-rc01.aar/54fd7c1bd3d0a645671233afce9379f3/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0-rc01.aar/49e823e5c0b28357a2d864dcdc29cef8/jars/classes.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0-rc01.aar/d981845ba8e7a546c655c7b1c17d76bd/jars/classes.jar:/home/pedro/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.0.0/e070ffae07452331bc5684734fce6831d531785c/lifecycle-common-2.0.0.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0-rc01.aar/552aa6f6f5bba2e3ad03ccc9f1edb8da/jars/classes.jar:/home/pedro/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.0.0/bb21b9a11761451b51624ac428d1f1bb5deeac38/core-common-2.0.0.jar:/home/pedro/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.0.0/45599f2cd5965ac05a1488fa2a5c0cdd7c499ead/annotation-1.0.0.jar:/home/pedro/.gradle/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout-solver/1.1.2/d324137427d23f643b61a2ad1cb20df2b8b1eb97/constraintlayout-solver-1.1.2.jar:/home/pedro/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.2.71/ba18ca1aa0e40eb6f1865b324af2f4cbb691c1ec/kotlin-stdlib-common-1.2.71.jar:/home/pedro/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/home/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0-rc01.aar/97c48960725c1e8f8e56f899a6e23a73/jars/classes.jar:/home/pedro/Android/Sdk/platforms/android-28/android.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="app_debug" />
+          <option name="jvmTarget" value="1.8" />
+          <option name="addCompilerBuiltIns" value="true" />
+          <option name="loadBuiltInsFromDependencies" value="true" />
+          <option name="languageVersion" value="1.2" />
+          <option name="apiVersion" value="1.2" />
+          <option name="pluginOptions">
+            <array>
+              <option value="plugin:org.jetbrains.kotlin.android:experimental=false" />
+              <option value="plugin:org.jetbrains.kotlin.android:enabled=true" />
+              <option value="plugin:org.jetbrains.kotlin.android:defaultCacheImplementation=hashMap" />
+            </array>
+          </option>
+          <option name="pluginClasspaths">
+            <array>
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.2.71/bda3ee49317ef7a1e8058de61f91abe94c015538/kotlin-android-extensions-1.2.71.jar" />
+            </array>
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true">
+    <exclude-output />
+    <orderEntry type="jdk" jdkName="Android API 28 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
